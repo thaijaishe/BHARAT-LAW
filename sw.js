@@ -1,5 +1,5 @@
 // BHARAT LAW service worker. Change VERSION on every release.
-const VERSION="2.6.0";
+const VERSION="2.6.1";
 const CACHE="bharat-law-"+VERSION;
 const CORE=["./","index.html","manifest.webmanifest","icons/icon-192.png","icons/icon-512.png","icons/logo.svg"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE.map(u=>new Request(u,{cache:"reload"})))))});
